@@ -1,0 +1,13 @@
+<%-
+  roles = Role.givable.sort
+  selected = @settings['default_watchers'] unless @settings['default_watchers'].blank?
+  selected ||= []
+%>
+
+<p>
+  <%= content_tag(:label, l(:label_default_watchers)) %>
+  <%= select_tag("settings[default_watchers]",
+                 content_tag(:option, '') + options_from_collection_for_select(roles, :id, :name, selected),
+                 :multiple => true)
+  %>
+</p>

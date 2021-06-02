@@ -1,0 +1,3 @@
+= default_watchers
+
+Automatically add watchers to new issues for all users with given role(s).

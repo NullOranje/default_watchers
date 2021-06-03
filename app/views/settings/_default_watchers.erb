@@ -1,7 +1,6 @@
 <%-
   roles = Role.givable.sort
-  selected = @settings['default_watchers'] unless @settings['default_watchers'].blank?
-  selected ||= []
+  selected = Setting.plugin_default_watchers['default_watchers']
 %>
 
 <p>

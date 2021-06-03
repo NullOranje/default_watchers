@@ -7,5 +7,5 @@ Redmine::Plugin.register :default_watchers do
   version '0.1.0'
   url 'http://github.com/NullOranje/default_watchers'
   author_url 'http://github.com/NullOranje/'
-  settings default: [], partial: 'settings/default_watchers'
+  settings default: {'default_watchers' => []}, partial: 'settings/default_watchers'
 end
